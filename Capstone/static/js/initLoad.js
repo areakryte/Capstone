@@ -49,11 +49,12 @@ $('document').ready(function(){
     $(".world-curr").append("<option value=\"3\">JPY</option>");
     $(".world-curr").append("<option value=\"4\">AUD</option>");
 
-    fixerJSON = $.get(fixerFull);
-    CAD = fixerJSON.responseJSON.rates.CAD;
-    AUD = fixerJSON.responseJSON.rates.AUD;
-    USD = fixerJSON.responseJSON.rates.USD;
-    JPY = fixerJSON.responseJSON.rates.JPY;
+    fixerJSON = $.get(fixerFull, function(){
+        CAD = fixerJSON.responseJSON.rates.CAD;
+        AUD = fixerJSON.responseJSON.rates.AUD;
+        USD = fixerJSON.responseJSON.rates.USD;
+        JPY = fixerJSON.responseJSON.rates.JPY;
+    });
 });
 
 $(".curr-input").change(function(){
@@ -69,15 +70,16 @@ $(".curr-input").change(function(){
 });
 
 $("select").change(function(){
-    baseCurrency = $(".base-currency .currency-footer .world-curr").val();
-    compareCurrency = $(".compare-currency .currency-footer .world-curr").val();
+    baseCurrency = parseInt($(".base-currency .currency-footer .world-curr").val());
+    compareCurrency = parseInt($(".compare-currency .currency-footer .world-curr").val());
+   
     var baseRate = 0;
-    var convertRate = 0;
 
     switch(baseCurrency){
         case 1:
             baseRate = parseInt(EUR)/parseInt(USD);
-            $('.currency-output').text(parseInt($(".curr-input").val()*baseRate)); 
+            //create switch for comparisions
+            //$('.currency-output').text(parseInt($(".curr-input").val()*baseRate)); 
             break;
         case 2:
             baseRate = parseInt(EUR)/parseInt(CAD);
