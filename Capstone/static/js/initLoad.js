@@ -2,7 +2,9 @@ var fixerAPI = "b0ccee5d705e88e27782a3b24102556a";
 var fixerBase = "http://data.fixer.io/api/";
 var fixerAuth = "http://data.fixer.io/api/latest?access_key=" + fixerAPI;
 var fixerFull = fixerAuth + "&symbols=USD,AUD,CAD,JPY&format=1";
-var fixerJSON = $.get(fixerFull);
+var fixerJSON = "";
+var baseCurrency = 0;
+var compareCurrency = 0;
 var extraCount = 0;
 var EUR = 1;
 var AUD = "";
@@ -47,6 +49,7 @@ $('document').ready(function(){
     $(".world-curr").append("<option value=\"3\">JPY</option>");
     $(".world-curr").append("<option value=\"4\">AUD</option>");
 
+    fixerJSON = $.get(fixerFull);
     CAD = fixerJSON.responseJSON.rates.CAD;
     AUD = fixerJSON.responseJSON.rates.AUD;
     USD = fixerJSON.responseJSON.rates.USD;
@@ -65,12 +68,33 @@ $(".curr-input").change(function(){
     }    
 });
 
-$(".base-currency .currency-footer .worldcurr").ready(function(){
+$("select").change(function(){
+    baseCurrency = $(".base-currency .currency-footer .world-curr").val();
+    compareCurrency = $(".compare-currency .currency-footer .world-curr").val();
+    var baseRate = 0;
+    var convertRate = 0;
 
-});
-
-$(".compare-currency .currency-footer .worldcurr").ready(function(){
-
+    switch(baseCurrency){
+        case 1:
+            baseRate = parseInt(EUR)/parseInt(USD);
+            $('.currency-output').text(parseInt($(".curr-input").val()*baseRate)); 
+            break;
+        case 2:
+            baseRate = parseInt(EUR)/parseInt(CAD);
+            break;
+        case 3:
+        baseRate = parseInt(EUR);
+            break;
+        case 4:
+            baseRate = parseInt(EUR)/parseInt(JPY);
+            break;
+        case 5:
+            baseRate = parseInt(EUR)/parseInt(AUD);
+            break;
+        default:
+            baseRate = parseInt(EUR)/parseInt(USD);
+            break;
+    }
 });
 
 function addCurrency(){
