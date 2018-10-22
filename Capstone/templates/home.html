@@ -1,7 +1,52 @@
 {% extends "layout.html" %}
 {% block title %}
-Home
+World Currency Picker
 {% endblock %}
 {% block content %}
-<p>Home page for the Visual Studio Code Flask tutorial.</p>
+<div class="currency base-currency col-lg-3">
+    <div class="currency-header">
+        <p>Base Currency</p>
+    </div>
+
+    <div class="currency-body">
+        <input class="curr-input" type="text">
+    </div>
+
+    <div class="currency-footer"> 
+        <select class="world-curr">
+
+        </select>
+    </div>   
+</div>
+<div class="currency compare-currency col-lg-3">
+    <div class="currency-header">
+        <p>Compare Currency</p>
+    </div>
+
+    <div class="currency-body">
+        <p class="curr-output"></p>
+    </div>
+    
+    <div class="currency-footer"> 
+        <select class="world-curr">
+        
+        </select>
+    </div> 
+</div>
+<div class="currency add-currency col-lg-3">
+    <div class="currency-header">
+        <p>Add Currency</p>
+    </div>
+
+    <div class="currency-body">
+        <img class="add-curr" src="static/images/add_icon.png" onclick="addCurrency()">
+    </div>
+    
+    <div class="currency-footer"> 
+            <select class="world-curr">
+            
+            </select>
+        </div> 
+</div>
+<script src="static/js/initLoad.js"></script>
 {% endblock %}

@@ -4,7 +4,7 @@ body{
 
 .box{
 	background-color: white;
-	height: 80%;
+	height: 100%;
 	width: 100%
 }
 
@@ -31,7 +31,95 @@ body{
     margin-left: 30px;
 }
 
+.output-curr{
+    height: 15em;
+}
+
+.add-curr{
+    height: 100px;
+    width: 100px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .body-content {
-    padding: 5px;
+    width: 90%;
+    height: 90%;
+    margin-top: -20px;
+    padding: 10px;
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 5px;
+}
+
+.currency{
+    position: relative;
+    float: left;
+    background: #fff;
+    border: solid;
+    border-width: 1px;
+    border-color: gray;
+    height: 200px;
+    width: 200px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.base-currency {
+    background: #fff;    
+    border-color: gray;
+    position: relative;
+}
+
+.compare-currency{
+    background: #fff;
+    border-color: gray;
+    position: relative;
+} 
+
+.add-currency{
+    background: #fff;
+    border-color: gray;
+    position: relative;
+}
+
+.currency-header{
+    height: 35px;
+}
+
+.currency-body{
+    height: 120px;
+}
+
+.currency-footer{
+    height: 35px;
+}
+
+input[type="text"]{
+    width: 100%;
+    margin-top: 5px;
+}
+
+.world-curr{
+    width: 100%;
+}
+
+.modal-content {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    width: 100%;
+    pointer-events: auto;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.2);
+    border-radius: .3rem;
+    outline: 0;
 }

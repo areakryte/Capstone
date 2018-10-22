@@ -9,21 +9,21 @@
     </head>
 
     <body>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        
         <div class="navbar">
-            <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+            <a href="{{ url_for('home') }}" class="navbar-brand">Currency Picker</a>
+            <!-- <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
             <a href="{{ url_for('about') }}" class="navbar-brand">About</a>
-            <a href="{{ url_for('contact') }}" class="navbar-brand">Contact</a>
+            <a href="{{ url_for('contact') }}" class="navbar-brand">Contact</a> -->
         </div>
         
         <div class="body-content container box col-12">
             {% block content %}
             {% endblock %}
-            <hr/>
             <footer>
-                <p>&copy; 2018</p>
             </footer>
         </div>
     </body>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </html>
