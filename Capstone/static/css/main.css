@@ -80,9 +80,12 @@ body{
 } 
 
 .add-currency{
+    position: relative;
     background: #fff;
     border-color: gray;
     position: relative;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .currency-header{

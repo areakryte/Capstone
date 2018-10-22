@@ -1,6 +1,14 @@
 var fixerAPI = "b0ccee5d705e88e27782a3b24102556a";
 var fixerBase = "http://data.fixer.io/api/";
-var fixerAuth = "http://data.fixer.io/api/latest?access_key = " + fixerAPI;
+var fixerAuth = "http://data.fixer.io/api/latest?access_key=" + fixerAPI;
+var fixerFull = fixerAuth + "&symbols=USD,AUD,CAD,JPY&format=1";
+var fixerJSON = $.get(fixerFull);
+var extraCount = 0;
+var EUR = 1;
+var AUD = "";
+var CAD = "";
+var JPY = "";
+var USD = "";
 
 // $('document').ready(function(){
 //     //alert(10);
@@ -33,6 +41,16 @@ var fixerAuth = "http://data.fixer.io/api/latest?access_key = " + fixerAPI;
 $('document').ready(function(){
     var initWidth = $('.currency div .currency-body').css(["width"]);
     
+    $(".world-curr").append("<option value=\"0\">USD</option>");
+    $(".world-curr").append("<option value=\"1\">CAD</option>");
+    $(".world-curr").append("<option value=\"2\">EUR</option>");
+    $(".world-curr").append("<option value=\"3\">JPY</option>");
+    $(".world-curr").append("<option value=\"4\">AUD</option>");
+
+    CAD = fixerJSON.responseJSON.rates.CAD;
+    AUD = fixerJSON.responseJSON.rates.AUD;
+    USD = fixerJSON.responseJSON.rates.USD;
+    JPY = fixerJSON.responseJSON.rates.JPY;
 });
 
 $(".curr-input").change(function(){
@@ -47,6 +65,15 @@ $(".curr-input").change(function(){
     }    
 });
 
+$(".base-currency .currency-footer .worldcurr").ready(function(){
+
+});
+
+$(".compare-currency .currency-footer .worldcurr").ready(function(){
+
+});
+
 function addCurrency(){
 
 }
+
