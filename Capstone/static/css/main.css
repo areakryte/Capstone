@@ -62,7 +62,6 @@ body{
     border-width: 1px;
     border-color: gray;
     height: 200px;
-    width: 200px;
     margin-right: 10px;
     margin-left: 10px;
     margin-bottom: 10px;
@@ -72,6 +71,7 @@ body{
 .base-currency {
     background: #fff;    
     border-color: gray;
+    width: 200px;
     position: relative;
 }
 
@@ -79,13 +79,14 @@ body{
     background: #fff;
     border-color: gray;
     position: relative;
-    min-width: 200px;
+    min-width: 200px !important;
     display: inline-block;
 } 
 
 .add-currency{
     background: #fff;
     border-color: gray;
+    width: 200px;
     position: relative;
 }
 
@@ -133,4 +134,8 @@ input[type="text"]{
 
 p{
     font-size: 16px;
+}
+
+@media only screen and (max-width: 600px) {
+    
 }
