@@ -1,5 +1,6 @@
 body{
-	background-color: #66cc91;
+    background-color: #8ed8ad;
+    background-image: url('/static/images/transparent_gradient_overlay.png');
 }
 
 .box{
@@ -10,8 +11,9 @@ body{
 
 .navbar {
     background-color: lightslategray;
-    font-size: 1em;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-image: url('/static/images/cloth_texture.png');
+    font-family: 'K2D', sans-serif;
+    font-size: 2em;
     color: white;
     padding: 8px 5px 8px 5px;
 }
@@ -48,7 +50,7 @@ body{
     height: 90%;
     margin-top: -20px;
     padding: 10px;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'K2D', sans-serif;
     border-radius: 5px;
 }
 
@@ -77,19 +79,31 @@ body{
     background: #fff;
     border-color: gray;
     position: relative;
+    min-width: 200px;
+    display: inline-block;
 } 
 
 .add-currency{
-    position: relative;
     background: #fff;
     border-color: gray;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .currency-header{
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
     height: 35px;
+}
+
+.currency-header p {
+    position: relative;
+    text-align: center;
+}
+
+p.curr-output {
+    text-align: center;
+    font-size: 5em;
 }
 
 .currency-body{
@@ -103,26 +117,20 @@ body{
 input[type="text"]{
     width: 100%;
     margin-top: 5px;
+    border-top: 0px;
+    border-right: 0px;
+    border-left: 0px;
+    border-width: 1px;
+    border-color: gray;
+    background-color: #d4dbe8;
+    border-radius: 3px;
 }
 
 .world-curr{
     width: 100%;
+    font-size: 16px;
 }
 
-.modal-content {
-    position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    width: 100%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 1px solid rgba(0,0,0,.2);
-    border-radius: .3rem;
-    outline: 0;
+p{
+    font-size: 16px;
 }
