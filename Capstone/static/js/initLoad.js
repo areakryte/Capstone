@@ -48,6 +48,7 @@ $('document').ready(function(){
     $(".world-curr").append("<option value=\"2\">EUR</option>");
     $(".world-curr").append("<option value=\"3\">JPY</option>");
     $(".world-curr").append("<option value=\"4\">AUD</option>");
+<<<<<<< HEAD
     
     console.log(fixerJSON.responseJSON.rates);
     var currencyRates = fixerJSON.responseJSON.rates;
@@ -55,6 +56,8 @@ $('document').ready(function(){
     AUD = currencyRates.AUD;
     USD = currencyRates.USD;
     JPY = currencyRates.JPY;
+=======
+>>>>>>> 16ce37afd09efedb3a92514391ade5eaf06f2f4b
 });
 
 $(".curr-input").change(function(){
@@ -70,8 +73,6 @@ $(".curr-input").change(function(){
 });
 
 $("select").change(function(){
-    baseCurrency = $(".base-currency .currency-footer .world-curr").val();
-    compareCurrency = $(".compare-currency .currency-footer .world-curr").val();
     var baseRate = 0;
     var convertRate = 0;
 
