@@ -70,33 +70,23 @@ $(".curr-input").change(function(){
 });
 
 $("select").change(function(){
-    baseCurrency = parseInt($(".base-currency .currency-footer .world-curr").val());
-    compareCurrency = parseInt($(".compare-currency .currency-footer .world-curr").val());
+    baseCurrency = parseFloat($(".base-currency .currency-footer .world-curr").val());
+    compareCurrency = parseFloat($(".compare-currency .currency-footer .world-curr").val());
+    var amount = parseFloat($(".curr-input").val());
+    var worldCurrency = [USD,CAD,EUR,JPY,AUD];
    
-    var baseRate = 0;
+    var rateTo = 0;
 
-    switch(baseCurrency){
-        case 1:
-            baseRate = parseInt(EUR)/parseInt(USD);
-            //create switch for comparisions
-            //$('.currency-output').text(parseInt($(".curr-input").val()*baseRate)); 
-            break;
-        case 2:
-            baseRate = parseInt(EUR)/parseInt(CAD);
-            break;
-        case 3:
-        baseRate = parseInt(EUR);
-            break;
-        case 4:
-            baseRate = parseInt(EUR)/parseInt(JPY);
-            break;
-        case 5:
-            baseRate = parseInt(EUR)/parseInt(AUD);
-            break;
-        default:
-            baseRate = parseInt(EUR)/parseInt(USD);
-            break;
+    if(baseCurrency !== compareCurrency){
+        rateTo = parseFloat((amount*worldCurrency[compareCurrency])/worldCurrency[baseCurrency]);
+        $('.curr-output').text(parseFloat(rateTo)); 
     }
+    else{
+        $('.curr-output').text(parseFloat($(".curr-input").val())); 
+    }
+
+    
+    
 });
 
 function addCurrency(){
