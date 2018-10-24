@@ -1,9 +1,13 @@
-# Capstone
-Mobile/Web Capstone Project built in VSCode
+# Currency Converter (Capstone)
+Mobile/Web Capstone Project built with Flask
 
-Flask debug only current
+# Table of Contents
+Setup
+Usage
+Future Plans
 
-To Do:
-chartsjs
-Fixer.io api
-pony orm
+# Setup
+
+# Usage
+
+# Future Plans
