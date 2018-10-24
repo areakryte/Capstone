@@ -14,7 +14,9 @@ Currently there is no definitive setup as this is still a project under developm
 
 ![Basic Image](https://raw.githubusercontent.com/areakryte/Capstone/master/git-image/dev1.PNG)
 
-The only use for this website is to convert between the following currencys:
+To use this website, just input an amount and select the currencies that are being converting from and converting to.
+
+Currently, only the following currencies are convertable:
 * US Dollars
 * Canadian Dollars
 * Euro
