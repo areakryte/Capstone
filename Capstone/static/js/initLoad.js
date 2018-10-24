@@ -1,3 +1,4 @@
+//TODO: Globals need to be secured in a better way
 var fixerAPI = "b0ccee5d705e88e27782a3b24102556a";
 var fixerBase = "http://data.fixer.io/api/";
 var fixerAuth = "http://data.fixer.io/api/latest?access_key=" + fixerAPI;
@@ -32,6 +33,8 @@ $('document').ready(function(){
 $(".curr-input").change(function(){
     var currVal = $(".curr-input").val();
 
+    //Numberic input restriction
+    //TODO: Fix null case
     if(currVal.match(/[0-9]/))
     {
         $(".curr-output").text(currVal);
@@ -50,6 +53,8 @@ $("select").change(function(){
     var rateTo = 0;
 
     if(baseCurrency !== compareCurrency){
+        //Currency formula
+        //amountResult = (amountFrom*rateToCurrency)/rateFromCurrency
         rateTo = parseFloat((amount*worldCurrency[compareCurrency])/worldCurrency[baseCurrency]).toFixed(2);
         $('.curr-output').text(parseFloat(rateTo)); 
     }
@@ -58,6 +63,8 @@ $("select").change(function(){
     }
 });
 
+
+//TODO: Add other currency trackers
 function addCurrency(){
 
 }
