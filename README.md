@@ -27,5 +27,5 @@ Currently, only the following currencies are convertable:
 
 There are still things to do to improve this project.
 * Add Angular
-* Add PonyORM to store historical data
-* Add finicial formulas for analytical calculations
+* Add PonyORM to store historical timeseries data
+* Add financial formulas for analytical calculations
