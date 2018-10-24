@@ -12,6 +12,8 @@ Currently there is no definitive setup as this is still a project under developm
 
 ### Usage
 
+![Basic Image](/git-image/dev1.png)
+
 The only use for this website is to convert between the following currencys:
 * US Dollars
 * Canadian Dollars
