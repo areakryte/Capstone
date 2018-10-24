@@ -12,7 +12,7 @@ Currently there is no definitive setup as this is still a project under developm
 
 ### Usage
 
-![Basic Image](https://raw.githubusercontent.com/areakryte/Capstone/tree/master/git-image/dev1.png)
+![Basic Image](https://raw.githubusercontent.com/areakryte/Capstone/master/git-image/dev1.PNG)
 
 The only use for this website is to convert between the following currencys:
 * US Dollars
